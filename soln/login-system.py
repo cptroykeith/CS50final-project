@@ -1,5 +1,6 @@
 def register():
     db = open("database.txt", "r")
+    # users login information
     Username = input("Create username:")
     password = input("Create password:")
     password1 = input("Confirm password:")
