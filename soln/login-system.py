@@ -1,5 +1,6 @@
 def register():
     db = open("database.txt", "r")
+    # users signup information
     Username = input("Create username:")
     password = input("Create password:")
     password1 = input("Confirm password:")
@@ -11,10 +12,11 @@ def register():
         d.append(a)
         f.append(b)
     data = dict(zip(d, f))
-
+    #confirm users password if they match
     if password != password1:
         print("password does not match, restart")
         register()
+    # The password shouldnt be less than 7 characters    
     else:
         if len(password)<=7:
             print("password too short, restart:")
@@ -31,6 +33,7 @@ def register():
 
 def access():
     db = open("database.txt","r")
+    #users login information
     Username = input("Enter username:")
     password = input("Enter password:")
 
